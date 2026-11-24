@@ -1,0 +1,70 @@
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: Cluster
+metadata:
+  name: lab
+spec:
+  clusterNetwork:
+    cniConfig:
+      cilium: {}
+    pods:
+      cidrBlocks:
+        - 192.168.0.0/16
+    services:
+      cidrBlocks:
+        - 10.96.0.0/12
+  controlPlaneConfiguration:
+    count: 1
+    endpoint:
+      host: "192.168.11.200"
+      port: 6443
+    machineGroupRef:
+      kind: TinkerbellMachineConfig
+      name: lab-cp
+  datacenterRef:
+    kind: TinkerbellDatacenterConfig
+    name: lab
+  externalReferenceManifests: []
+  gitOpsRef: {}
+  identityProviderRefs: []
+  imageOverrideMap: {}
+  kind: Cluster
+  kubernetesVersion: "1.36"
+  managementCluster:
+    name: lab
+  packageControllerRef: {}
+  proxyConfig: {}
+  registryMirrorConfiguration: {}
+  secretRef: {}
+  workerNodeGroupConfigurations:
+    - count: 3
+      machineGroupRef:
+        kind: TinkerbellMachineConfig
+        name: lab-worker
+      name: md-0
+      preKubeadmCommands: []
+      postKubeadmCommands: []
+---
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: TinkerbellDatacenterConfig
+metadata:
+  name: lab
+spec:
+  tinkerbellIP: 192.168.11.201
+---
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: TinkerbellMachineConfig
+metadata:
+  name: lab-cp
+spec:
+  hardwareSelector:
+    type: cp
+  osFamily: ubuntu
+---
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: TinkerbellMachineConfig
+metadata:
+  name: lab-worker
+spec:
+  hardwareSelector:
+    type: worker
+  osFamily: ubuntu

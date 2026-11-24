@@ -1,0 +1,5 @@
+hostname,mac,ip_address,netmask,gateway,nameservers,labels,disk
+eksa-cp,52:54:00:aa:bb:51,192.168.11.101,255.255.255.0,192.168.11.1,1.1.1.1,type=cp,/dev/vda
+eksa-w1,52:54:00:aa:bb:52,192.168.11.102,255.255.255.0,192.168.11.1,1.1.1.1,type=worker,/dev/vda
+eksa-w2,52:54:00:aa:bb:53,192.168.11.103,255.255.255.0,192.168.11.1,1.1.1.1,type=worker,/dev/vda
+eksa-w3,52:54:00:aa:bb:54,192.168.11.104,255.255.255.0,192.168.11.1,1.1.1.1,type=worker,/dev/vda

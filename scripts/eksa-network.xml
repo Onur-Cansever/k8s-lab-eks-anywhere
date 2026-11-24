@@ -1,0 +1,9 @@
+# libvirt `eksa` ağı: 192.168.11.0/24, DHCP KAPALI (tek DHCP = EKS-A Tinkerbell)
+<network>
+  <name>eksa</name>
+  <uuid>a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d</uuid>
+  <bridge name='virbr1' stp='on' delay='0'/>
+  <ip address='192.168.11.1' netmask='255.255.255.0'>
+  </ip>
+  <forward mode='nat'/>
+</network>
