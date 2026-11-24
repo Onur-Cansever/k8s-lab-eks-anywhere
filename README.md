@@ -1,3 +1,4 @@
+> **Durum (24.11.2026): PARK EDİLDİ** — Canlı kurulum kararı ertelendi (Tinkerbell/PXE alt yapısı ve VM re-imaging maliyeti). Repo, plan + prosedür dokümanı olarak kalır; vanilla ve k3s laboratuvarları bu 4 VM üzerinde test edildi.
 # k8s-lab-eks-anywhere — 1 CP + 3 Worker EKS Anywhere (Bare Metal / KVM)
 
 AWS'un **EKS Anywhere** dağıtımıyla (Apache-2.0, ücretsiz), kendi VM'lerimizin

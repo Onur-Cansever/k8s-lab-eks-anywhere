@@ -1,3 +1,5 @@
+> **Not (24.11.2026):** Bu plan PARK EDİLDİ — canlı kurulum ertelendi. Mimari ve gereksinim analizi aşağıda aynen korunmaktadır.
+
 # 00 — Plan, Kapsam ve Kısıtlar
 
 ## Neden EKS Anywhere?
